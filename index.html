@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Alien Invasion</title>
+
+  <style>
+  * {
+    text-align: center;
+  }
+
+  h1 {
+      margin: 10px auto;
+  }
+
+  img {
+    width: 200px;
+    display: block;
+    padding: 10px;
+  }
+
+  button {
+      border-radius: 10px;
+      margin: 30px auto;
+      padding: 15px;
+      font-size: 20px;
+      width: 100px;
+  }
+
+  button:hover {
+    cursor: pointer;
+    background-color: lightgray;
+  }
+
+  #ships {
+      display: flex;
+      flex-direction: column;
+  }
+
+  span {
+    font-size: 25px;
+    color: rgb(57, 12, 12);
+  }
+
+  div {
+      display: inline-block;
+      margin: 10px;
+  }
+  </style>
+</head>
+<body>
+  <h1>Aliens Invasion</h1>
+  <div id="ships">
+    <div class="mother-ship">
+      <div id="MotherShip"></div>
+    </div>
+    <div class="defence-ships">
+      <div id="Defence-One"></div>
+      <div id="Defence-Two"></div>
+      <div id="Defence-Three"></div>
+      <div id="Defence-Four"></div>
+      <div id="Defence-Five"></div>
+    </div>
+    <div class="attack-ships">
+      <div id="Attack-One"></div>
+      <div id="Attack-Two"></div>
+      <div id="Attack-Three"></div>
+      <div id="Attack-Four"></div>
+      <div id="Attack-Five"></div>
+      <div id="Attack-Six"></div>
+      <div id="Attack-Seven"></div>
+      <div id="Attack-Eight"></div>
+    </div>
+  </div>
+  <button id="fire">Fire!</button>
+  <button id="reset">Reset</button>
+
+  <script>
+  class Ship {
+    constructor(name, points, hitpoints, img) {
+    this.name = name;
+    this.points = points;
+    this.hitpoints = hitpoints;
+    this.img = img;
+    }
+
+    damage() {
+    this.points = this.points - this.hitpoints;
+    }
+
+    updateNewPoint() {
+    document.getElementById(
+        this.name
+    ).innerHTML = `${this.img} ${this.name} : <span> ${this.points} </span>`;
+    this.damage();
+    }
+
+    destroyed() {
+    this.points = 0;
+    document.getElementById(this.name).innerHTML = "";
+    }
+  }
+
+  const motherShip = new Ship("MotherShip", 100, 9, '<img src="https://i.pinimg.com/originals/81/65/ed/8165ed34015b93331ffe039103b68e7e.jpg">');
+  const defense1 = new Ship("Defence-One", 80, 10, '<img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/df1bafaf-df77-4463-8445-c837b6435877/d5goejc-734be846-e26c-45b4-95cc-f7bc1c19792e.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3sicGF0aCI6IlwvZlwvZGYxYmFmYWYtZGY3Ny00NDYzLTg0NDUtYzgzN2I2NDM1ODc3XC9kNWdvZWpjLTczNGJlODQ2LWUyNmMtNDViNC05NWNjLWY3YmMxYzE5NzkyZS5wbmcifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdfQ.5mDaogRoADFdqm4PPnZKcQzfl8s6JFHB8b23AH7OGa0">');
+  const defense2 = new Ship("Defence-Two", 80, 10, '<img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/df1bafaf-df77-4463-8445-c837b6435877/d5goejc-734be846-e26c-45b4-95cc-f7bc1c19792e.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3sicGF0aCI6IlwvZlwvZGYxYmFmYWYtZGY3Ny00NDYzLTg0NDUtYzgzN2I2NDM1ODc3XC9kNWdvZWpjLTczNGJlODQ2LWUyNmMtNDViNC05NWNjLWY3YmMxYzE5NzkyZS5wbmcifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdfQ.5mDaogRoADFdqm4PPnZKcQzfl8s6JFHB8b23AH7OGa0">');
+  const defense3 = new Ship("Defence-Three", 80, 10, '<img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/df1bafaf-df77-4463-8445-c837b6435877/d5goejc-734be846-e26c-45b4-95cc-f7bc1c19792e.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3sicGF0aCI6IlwvZlwvZGYxYmFmYWYtZGY3Ny00NDYzLTg0NDUtYzgzN2I2NDM1ODc3XC9kNWdvZWpjLTczNGJlODQ2LWUyNmMtNDViNC05NWNjLWY3YmMxYzE5NzkyZS5wbmcifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdfQ.5mDaogRoADFdqm4PPnZKcQzfl8s6JFHB8b23AH7OGa0">');
+  const defense4 = new Ship("Defence-Four", 80, 10, '<img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/df1bafaf-df77-4463-8445-c837b6435877/d5goejc-734be846-e26c-45b4-95cc-f7bc1c19792e.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3sicGF0aCI6IlwvZlwvZGYxYmFmYWYtZGY3Ny00NDYzLTg0NDUtYzgzN2I2NDM1ODc3XC9kNWdvZWpjLTczNGJlODQ2LWUyNmMtNDViNC05NWNjLWY3YmMxYzE5NzkyZS5wbmcifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdfQ.5mDaogRoADFdqm4PPnZKcQzfl8s6JFHB8b23AH7OGa0">');
+  const defense5 = new Ship("Defence-Five", 80, 10, '<img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/df1bafaf-df77-4463-8445-c837b6435877/d5goejc-734be846-e26c-45b4-95cc-f7bc1c19792e.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3sicGF0aCI6IlwvZlwvZGYxYmFmYWYtZGY3Ny00NDYzLTg0NDUtYzgzN2I2NDM1ODc3XC9kNWdvZWpjLTczNGJlODQ2LWUyNmMtNDViNC05NWNjLWY3YmMxYzE5NzkyZS5wbmcifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdfQ.5mDaogRoADFdqm4PPnZKcQzfl8s6JFHB8b23AH7OGa0">');
+  const attack1 = new Ship("Attack-One", 45, 12, '<img src="https://cdn.dribbble.com/users/2552641/screenshots/6644376/harbinger-01_1x.jpg">');
+  const attack2 = new Ship("Attack-Two", 45, 12, '<img src="https://cdn.dribbble.com/users/2552641/screenshots/6644376/harbinger-01_1x.jpg">');
+  const attack3 = new Ship("Attack-Three", 45, 12, '<img src="https://cdn.dribbble.com/users/2552641/screenshots/6644376/harbinger-01_1x.jpg">');
+  const attack4 = new Ship("Attack-Four", 45, 12, '<img src="https://cdn.dribbble.com/users/2552641/screenshots/6644376/harbinger-01_1x.jpg">');
+  const attack5 = new Ship("Attack-Five", 45, 12, '<img src="https://cdn.dribbble.com/users/2552641/screenshots/6644376/harbinger-01_1x.jpg">');
+  const attack6 = new Ship("Attack-Six", 45, 12, '<img src="https://cdn.dribbble.com/users/2552641/screenshots/6644376/harbinger-01_1x.jpg">');
+  const attack7 = new Ship("Attack-Seven", 45, 12, '<img src="https://cdn.dribbble.com/users/2552641/screenshots/6644376/harbinger-01_1x.jpg">');
+  const attack8 = new Ship("Attack-Eight", 45, 12, '<img src="https://cdn.dribbble.com/users/2552641/screenshots/6644376/harbinger-01_1x.jpg">');
+
+  const alienShip = [motherShip, defense1, defense2, defense3, defense4, defense5, attack1, attack2, attack3, attack4, attack5, attack6, attack7, attack8];
+
+  alienShip.forEach((ship) => ship.updateNewPoint());
+
+  const endGame = () => {
+      alienShip.forEach((ship) => ship.destroyed());
+  };
+
+  const displayDamage = () => {
+    const randomPosition = Math.floor(Math.random() * alienShip.length);
+    alienShip[randomPosition].updateNewPoint();
+    if (alienShip[randomPosition].points <= 0 && alienShip[randomPosition].name === "MotherShip") {
+    endGame();
+    document.getElementById(`${alienShip[randomPosition].name}`).innerHTML ="";
+    alert("MotherShip destroyed!!!!");
+    } else if (alienShip[randomPosition].points <= 0) {
+    document.getElementById(alienShip[randomPosition].name).innerHTML = "";
+    alienShip.splice(randomPosition, 1);
+    }
+  };
+
+  const resetgame = () => {
+    location.reload();
+  }
+
+  document.getElementById("fire").addEventListener("click", displayDamage);
+  document.getElementById("reset").addEventListener("click", resetgame);
+  </script>
+</body>
+</html>
