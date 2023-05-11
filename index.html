@@ -12,11 +12,11 @@
   }
 
   h1 {
-      margin: 10px auto;
+      margin: 5px auto;
   }
 
   img {
-    width: 200px;
+    width: 120px;
     display: block;
     padding: 10px;
   }
@@ -46,7 +46,7 @@
 
   div {
       display: inline-block;
-      margin: 10px;
+      margin: 4px;
   }
 </style>
 
@@ -104,20 +104,20 @@
       }
     }
 
-    const motherShip = new Ship("MotherShip", 100, 9, '<img src="https://i.pinimg.com/originals/81/65/ed/8165ed34015b93331ffe039103b68e7e.jpg">');
-    const defense1 = new Ship("Defence-One", 80, 10, '<img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/df1bafaf-df77-4463-8445-c837b6435877/d5goejc-734be846-e26c-45b4-95cc-f7bc1c19792e.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3sicGF0aCI6IlwvZlwvZGYxYmFmYWYtZGY3Ny00NDYzLTg0NDUtYzgzN2I2NDM1ODc3XC9kNWdvZWpjLTczNGJlODQ2LWUyNmMtNDViNC05NWNjLWY3YmMxYzE5NzkyZS5wbmcifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdfQ.5mDaogRoADFdqm4PPnZKcQzfl8s6JFHB8b23AH7OGa0">');
-    const defense2 = new Ship("Defence-Two", 80, 10, '<img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/df1bafaf-df77-4463-8445-c837b6435877/d5goejc-734be846-e26c-45b4-95cc-f7bc1c19792e.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3sicGF0aCI6IlwvZlwvZGYxYmFmYWYtZGY3Ny00NDYzLTg0NDUtYzgzN2I2NDM1ODc3XC9kNWdvZWpjLTczNGJlODQ2LWUyNmMtNDViNC05NWNjLWY3YmMxYzE5NzkyZS5wbmcifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdfQ.5mDaogRoADFdqm4PPnZKcQzfl8s6JFHB8b23AH7OGa0">');
-    const defense3 = new Ship("Defence-Three", 80, 10, '<img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/df1bafaf-df77-4463-8445-c837b6435877/d5goejc-734be846-e26c-45b4-95cc-f7bc1c19792e.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3sicGF0aCI6IlwvZlwvZGYxYmFmYWYtZGY3Ny00NDYzLTg0NDUtYzgzN2I2NDM1ODc3XC9kNWdvZWpjLTczNGJlODQ2LWUyNmMtNDViNC05NWNjLWY3YmMxYzE5NzkyZS5wbmcifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdfQ.5mDaogRoADFdqm4PPnZKcQzfl8s6JFHB8b23AH7OGa0">');
-    const defense4 = new Ship("Defence-Four", 80, 10, '<img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/df1bafaf-df77-4463-8445-c837b6435877/d5goejc-734be846-e26c-45b4-95cc-f7bc1c19792e.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3sicGF0aCI6IlwvZlwvZGYxYmFmYWYtZGY3Ny00NDYzLTg0NDUtYzgzN2I2NDM1ODc3XC9kNWdvZWpjLTczNGJlODQ2LWUyNmMtNDViNC05NWNjLWY3YmMxYzE5NzkyZS5wbmcifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdfQ.5mDaogRoADFdqm4PPnZKcQzfl8s6JFHB8b23AH7OGa0">');
-    const defense5 = new Ship("Defence-Five", 80, 10, '<img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/df1bafaf-df77-4463-8445-c837b6435877/d5goejc-734be846-e26c-45b4-95cc-f7bc1c19792e.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3sicGF0aCI6IlwvZlwvZGYxYmFmYWYtZGY3Ny00NDYzLTg0NDUtYzgzN2I2NDM1ODc3XC9kNWdvZWpjLTczNGJlODQ2LWUyNmMtNDViNC05NWNjLWY3YmMxYzE5NzkyZS5wbmcifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdfQ.5mDaogRoADFdqm4PPnZKcQzfl8s6JFHB8b23AH7OGa0">');
-    const attack1 = new Ship("Attack-One", 45, 12, '<img src="https://cdn.dribbble.com/users/2552641/screenshots/6644376/harbinger-01_1x.jpg">');
-    const attack2 = new Ship("Attack-Two", 45, 12, '<img src="https://cdn.dribbble.com/users/2552641/screenshots/6644376/harbinger-01_1x.jpg">');
-    const attack3 = new Ship("Attack-Three", 45, 12, '<img src="https://cdn.dribbble.com/users/2552641/screenshots/6644376/harbinger-01_1x.jpg">');
-    const attack4 = new Ship("Attack-Four", 45, 12, '<img src="https://cdn.dribbble.com/users/2552641/screenshots/6644376/harbinger-01_1x.jpg">');
-    const attack5 = new Ship("Attack-Five", 45, 12, '<img src="https://cdn.dribbble.com/users/2552641/screenshots/6644376/harbinger-01_1x.jpg">');
-    const attack6 = new Ship("Attack-Six", 45, 12, '<img src="https://cdn.dribbble.com/users/2552641/screenshots/6644376/harbinger-01_1x.jpg">');
-    const attack7 = new Ship("Attack-Seven", 45, 12, '<img src="https://cdn.dribbble.com/users/2552641/screenshots/6644376/harbinger-01_1x.jpg">');
-    const attack8 = new Ship("Attack-Eight", 45, 12, '<img src="https://cdn.dribbble.com/users/2552641/screenshots/6644376/harbinger-01_1x.jpg">');
+    const motherShip = new Ship("MotherShip", 100, 9, '<img src="https://i.pinimg.com/originals/b2/27/ac/b227acdc528279dbe116ee4af4d181e1.jpg">');
+    const defense1 = new Ship("Defence-One", 80, 10, '<img src="https://cdn.wccftech.com/wp-content/uploads/2012/08/Leviathan.png">');
+    const defense2 = new Ship("Defence-Two", 80, 10, '<img src="https://cdn.wccftech.com/wp-content/uploads/2012/08/Leviathan.png">');
+    const defense3 = new Ship("Defence-Three", 80, 10, '<img src="https://cdn.wccftech.com/wp-content/uploads/2012/08/Leviathan.png">');
+    const defense4 = new Ship("Defence-Four", 80, 10, '<img src="https://cdn.wccftech.com/wp-content/uploads/2012/08/Leviathan.png">');
+    const defense5 = new Ship("Defence-Five", 80, 10, '<img src="https://cdn.wccftech.com/wp-content/uploads/2012/08/Leviathan.png">');
+    const attack1 = new Ship("Attack-One", 45, 12, '<img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/a8baa77f-c488-4769-bb75-a8a228144b41/de2la9l-4aa85f70-2a28-4d85-b2c9-419e7bc8320d.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2E4YmFhNzdmLWM0ODgtNDc2OS1iYjc1LWE4YTIyODE0NGI0MVwvZGUybGE5bC00YWE4NWY3MC0yYTI4LTRkODUtYjJjOS00MTllN2JjODMyMGQucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.ODABEWtT6iHNxR1d9sS5EKUTQSDw5wRNZuSRPeINM0U">');
+    const attack2 = new Ship("Attack-Two", 45, 12, '<img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/a8baa77f-c488-4769-bb75-a8a228144b41/de2la9l-4aa85f70-2a28-4d85-b2c9-419e7bc8320d.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2E4YmFhNzdmLWM0ODgtNDc2OS1iYjc1LWE4YTIyODE0NGI0MVwvZGUybGE5bC00YWE4NWY3MC0yYTI4LTRkODUtYjJjOS00MTllN2JjODMyMGQucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.ODABEWtT6iHNxR1d9sS5EKUTQSDw5wRNZuSRPeINM0U">');
+    const attack3 = new Ship("Attack-Three", 45, 12, '<img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/a8baa77f-c488-4769-bb75-a8a228144b41/de2la9l-4aa85f70-2a28-4d85-b2c9-419e7bc8320d.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2E4YmFhNzdmLWM0ODgtNDc2OS1iYjc1LWE4YTIyODE0NGI0MVwvZGUybGE5bC00YWE4NWY3MC0yYTI4LTRkODUtYjJjOS00MTllN2JjODMyMGQucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.ODABEWtT6iHNxR1d9sS5EKUTQSDw5wRNZuSRPeINM0U">');
+    const attack4 = new Ship("Attack-Four", 45, 12, '<img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/a8baa77f-c488-4769-bb75-a8a228144b41/de2la9l-4aa85f70-2a28-4d85-b2c9-419e7bc8320d.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2E4YmFhNzdmLWM0ODgtNDc2OS1iYjc1LWE4YTIyODE0NGI0MVwvZGUybGE5bC00YWE4NWY3MC0yYTI4LTRkODUtYjJjOS00MTllN2JjODMyMGQucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.ODABEWtT6iHNxR1d9sS5EKUTQSDw5wRNZuSRPeINM0U">');
+    const attack5 = new Ship("Attack-Five", 45, 12, '<img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/a8baa77f-c488-4769-bb75-a8a228144b41/de2la9l-4aa85f70-2a28-4d85-b2c9-419e7bc8320d.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2E4YmFhNzdmLWM0ODgtNDc2OS1iYjc1LWE4YTIyODE0NGI0MVwvZGUybGE5bC00YWE4NWY3MC0yYTI4LTRkODUtYjJjOS00MTllN2JjODMyMGQucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.ODABEWtT6iHNxR1d9sS5EKUTQSDw5wRNZuSRPeINM0U">');
+    const attack6 = new Ship("Attack-Six", 45, 12, '<img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/a8baa77f-c488-4769-bb75-a8a228144b41/de2la9l-4aa85f70-2a28-4d85-b2c9-419e7bc8320d.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2E4YmFhNzdmLWM0ODgtNDc2OS1iYjc1LWE4YTIyODE0NGI0MVwvZGUybGE5bC00YWE4NWY3MC0yYTI4LTRkODUtYjJjOS00MTllN2JjODMyMGQucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.ODABEWtT6iHNxR1d9sS5EKUTQSDw5wRNZuSRPeINM0U">');
+    const attack7 = new Ship("Attack-Seven", 45, 12, '<img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/a8baa77f-c488-4769-bb75-a8a228144b41/de2la9l-4aa85f70-2a28-4d85-b2c9-419e7bc8320d.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2E4YmFhNzdmLWM0ODgtNDc2OS1iYjc1LWE4YTIyODE0NGI0MVwvZGUybGE5bC00YWE4NWY3MC0yYTI4LTRkODUtYjJjOS00MTllN2JjODMyMGQucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.ODABEWtT6iHNxR1d9sS5EKUTQSDw5wRNZuSRPeINM0U">');
+    const attack8 = new Ship("Attack-Eight", 45, 12, '<img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/a8baa77f-c488-4769-bb75-a8a228144b41/de2la9l-4aa85f70-2a28-4d85-b2c9-419e7bc8320d.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2E4YmFhNzdmLWM0ODgtNDc2OS1iYjc1LWE4YTIyODE0NGI0MVwvZGUybGE5bC00YWE4NWY3MC0yYTI4LTRkODUtYjJjOS00MTllN2JjODMyMGQucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.ODABEWtT6iHNxR1d9sS5EKUTQSDw5wRNZuSRPeINM0U">');
 
     const alienShip = [motherShip, defense1, defense2, defense3, defense4, defense5, attack1, attack2, attack3, attack4, attack5, attack6, attack7, attack8];
 
